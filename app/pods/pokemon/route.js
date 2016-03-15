@@ -1,8 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('pokemon');
+  queryParams: {
+    offset: {
+      refreshModel: true
+    }
+  },
+
+  model(params) {
+    return this.store.query('pokemon', params);
   },
 
   afterModel(pokemon) {

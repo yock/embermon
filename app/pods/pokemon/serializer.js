@@ -32,8 +32,20 @@ export default DS.RESTSerializer.extend({
   _extractMeta(payload) {
     return {
       count: payload.count,
-      next: payload.next,
-      prev: payload.previous
+      next: this._parseOffset(payload.next),
+      prev: this._parseOffset(payload.previous)
     };
+  },
+
+  _parseOffset(url) {
+    if(url === null) {
+      return 0;
+    }
+    const parser = document.createElement('a');
+    parser.href = url;
+    const offset = parser.search.split('&').find((element) => {
+      return element.match(/offset/)
+    } )
+    return offset === undefined ? 0 : offset.split('=').pop()
   }
 });

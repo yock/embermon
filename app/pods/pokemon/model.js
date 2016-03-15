@@ -6,5 +6,5 @@ inflector.irregular('pokemon', 'pokemon');
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  imageUrl: DS.attr('string')
+  imageUrl: DS.attr('string', { defaultValue: '/images/pokeball.svg' })
 });

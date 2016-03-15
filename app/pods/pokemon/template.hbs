@@ -1,4 +1,4 @@
-<h2>Default Pokémon</h2>
+<h2>Choose Your Pokémon</h2>
 
 <ul>
   {{#each model as |pokemon|}}
@@ -6,4 +6,4 @@
   {{/each}}
 </ul>
 
-{{pagination-controls meta=pokemon.meta}}
+{{pagination-controls meta=meta next=(action 'next') prev=(action 'prev')}}
