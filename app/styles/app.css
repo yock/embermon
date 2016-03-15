@@ -1,10 +1,73 @@
-ul, ol {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+body {
+  background: #F5C04E;
 }
 
-.pokemon-summary img {
-  margin-bottom: -20px;
-  flex-grow: 1;
+h2 {
+  font-family: Bangers, Helvetica, sans-serif;
+  font-size: 8vw;
+  text-align: center;
+  font-weight: normal;
+  margin: 5vh;
+  color: #c30000;
+  text-shadow:
+    1px 1px #DE993A,
+    2px 2px #DE993A,
+    3px 3px #DE993A,
+    4px 4px #DE993A,
+    5px 5px #DE993A,
+    6px 6px #DE993A,
+    7px 7px #DE993A,
+    8px 8px #DE993A,
+    9px 9px #DE993A,
+    10px 10px #DE993A;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pokemon-summary {
+  background: linear-gradient(#9BF1FA, #5FDFEC);
+  border: 4px solid #339BA6;
+  border-radius: 20px;
+  width: 200px;
+  height: 296px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1em;
+  box-shadow: 0.5em 0.5em #DE993A;
+}
+
+.pokemon-image {
+  order: 1;
+  display: block;
+  text-align: center;
+}
+
+.pokemon-image img {
+  width: 100%;
+  /*-webkit-filter: drop-shadow(0 4px 12px #158E9B);*/
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated; /* Chrome */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+.pokemon-name {
+  order: 0;
+  font-family: Bangers, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 2em;
+  color: #132426;
+  text-align: center;
+  text-shadow: 1px 1px white, 2px 2px white, 3px 3px white;
 }
