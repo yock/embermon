@@ -1,0 +1,10 @@
+ul, ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon-summary img {
+  margin-bottom: -20px;
+  flex-grow: 1;
+}

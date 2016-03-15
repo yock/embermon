@@ -1,0 +1,9 @@
+<h2>Default Pokemon</h2>
+
+<ul>
+  {{#each model as |pokemon|}}
+    <li>{{pokemon-summary pokemon=pokemon}}</li>
+  {{/each}}
+</ul>
+
+{{pagination-controls meta=pokemon.meta}}

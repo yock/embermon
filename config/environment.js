@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'embermon',
+    podModulePrefix: 'embermon/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
