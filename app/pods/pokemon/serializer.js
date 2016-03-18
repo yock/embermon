@@ -44,8 +44,8 @@ export default DS.RESTSerializer.extend({
     const parser = document.createElement('a');
     parser.href = url;
     const offset = parser.search.split('&').find((element) => {
-      return element.match(/offset/)
-    } )
-    return offset === undefined ? 0 : offset.split('=').pop()
+      return element.match(/offset/);
+    });
+    return offset === undefined ? 0 : offset.split('=').pop();
   }
 });
