@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
       this.set('offset', this.get('model.meta.next'));
     },
     prev() {
-      this.set('offset', this.get('model.meta.previous'));
+      this.set('offset', this.get('model.meta.prev'));
     }
   }
 });
