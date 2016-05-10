@@ -6,5 +6,7 @@ inflector.irregular('pokemon', 'pokemon');
 
 export default DS.Model.extend({
   name: DS.attr('string'),
-  imageUrl: DS.attr('string', { defaultValue: '/images/pokeball.svg' })
+  imageUrl: Ember.computed('id', function() {
+    return `http://pokeapi.co/media/sprites/pokemon/${this.get('id')}.png`;
+  })
 });

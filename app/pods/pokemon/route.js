@@ -8,13 +8,6 @@ export default Ember.Route.extend({
   },
 
   model(params) {
-    return this.store.query('pokemon', params);
-  },
-
-  afterModel(pokemon) {
-    pokemon.forEach((p) => {
-      this.store.findRecord('pokemon', p.id);
-    });
-    return null;
+    return this.get('store').query('pokemon', params);
   }
 });
