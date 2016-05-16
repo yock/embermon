@@ -1,6 +1,8 @@
-<span class="pokemon-image">
-  <img src={{pokemon.imageUrl}} alt={{pokemon.name}}>
-</span>
-<h3 class="pokemon-name">
-  {{pokemon.name}}
-</h3>
+<div class="pokemon-summary {{if inGym 'in-gym'}}" onclick={{action 'click'}}>
+  <span class="pokemon-image">
+    <img src={{pokemon.imageUrl}} alt={{pokemon.name}}>
+  </span>
+  <h3 class="pokemon-name">
+    {{pokemon.name}}
+  </h3>
+</div>

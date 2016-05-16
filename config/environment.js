@@ -5,6 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'embermon',
     podModulePrefix: 'embermon/pods',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://embermon.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

@@ -42,6 +42,12 @@ ul {
   justify-content: space-between;
   margin: 1em;
   box-shadow: 0.5em 0.5em #DE993A;
+  cursor: pointer;
+}
+
+.pokemon-summary.in-gym {
+  background: linear-gradient(#FFCB9D, #FFAD65);
+  border-color: #FFA04C;
 }
 
 .pokemon-image {
