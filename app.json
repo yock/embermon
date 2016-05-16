@@ -6,10 +6,10 @@
     "gcjs"
   ],
   "env": {
-    "NPM_CONFIG_PRODUCTION" {
+    "NPM_CONFIG_PRODUCTION": {
       "description": "Required by Heroku's EmberJS buildpack"
     }
-  }
+  },
   "buildpacks": [
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs" },
     { "url": "https://github.com/heroku/heroku-buildpack-ember-cli" },
