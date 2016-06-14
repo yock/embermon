@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('pokemon', { path: '' });
+  this.route('pokemon');
   this.route('gym');
 });
 
